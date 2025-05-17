@@ -1,4 +1,4 @@
-package ac.lk.vau.fas.ict.model;
+package lk.ac.vau.fas.ict.model;
 
 import java.util.List;
 
