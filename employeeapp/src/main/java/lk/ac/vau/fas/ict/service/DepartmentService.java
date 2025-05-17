@@ -13,4 +13,18 @@ import lk.ac.vau.fas.ict.repo.DepartmentRepo;
 public class DepartmentService {
 	@Autowired
 	private DepartmentRepo repo;
+	
+	public List<Department> getDept()
+	{
+		return repo.findAll();
+	}
+    
+	public Department getDept(@PathVariable("id") int id) {
+		if(repo.findById(id).isEmpty())
+		{
+			return null;
+			
+		}
+		return repo.findById(id).get();
+	}
 }
